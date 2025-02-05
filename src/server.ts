@@ -4,6 +4,7 @@ import userRouter from "./routes/user";
 import restaurantRouter from "./routes/restaurant";
 import orderRouter from "./routes/order";
 import itemRouter from "./routes/item";
+import orderitemRouter from "./routes/orderitem";
 
 const app = express();
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use("/users", userRouter)
 app.use("/restaurants", restaurantRouter)
 app.use("/orders", orderRouter)
 app.use("/items", itemRouter)
+app.use("/orderitems", orderitemRouter)
 
 const PORT = 5000;
 

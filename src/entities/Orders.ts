@@ -1,4 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
+import { Min } from "class-validator";
 import { Restaurants } from "./Restaurants";
 import { Users } from "./Users";
 import { OrderItems } from "./OrderItems";
@@ -14,6 +15,7 @@ export class Orders {
     id: number
 
     @Column()
+    @Min(0)
     amount: number
 
     @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
